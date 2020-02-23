@@ -30,6 +30,7 @@ namespace Capstone.Views
 
         protected override void SetMenuOptions() 
         {
+            // Displays all parks and allows the user to select them
             IList<Park> parkList = parkObj.GetAllParks();
             int i = 1;
             

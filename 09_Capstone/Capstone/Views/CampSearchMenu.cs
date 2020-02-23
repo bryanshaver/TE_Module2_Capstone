@@ -65,6 +65,7 @@ namespace Capstone.Views
 
         private void SearchReservation()
         {
+            // prompt user for arrival and end date, run getSites()
             Console.Write("What is the arrival date? Year-Month-Date ");
             string arrival = Console.ReadLine();
             DateTime startDate = Convert.ToDateTime(arrival).Date;
@@ -96,8 +97,8 @@ namespace Capstone.Views
             }
 
             Console.WriteLine("Which site would you like to reserve? (0 to cancel) ");
-            string siteIdStr = Console.ReadLine(); // TODO 02: make sure only a valid SiteId can be selected (try/catch?)
-
+            string siteIdStr = Console.ReadLine(); 
+            // make sure user entry is a valid site number, if it is make the reservation and display ID. If it is not, throw exception and return to selection screen
             try
             {
                 int siteId = Convert.ToInt32(siteIdStr);

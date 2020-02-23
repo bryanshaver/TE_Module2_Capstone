@@ -45,11 +45,11 @@ namespace Capstone.Views
         {
             switch (choice)
             {
-                case "1": // Do whatever option 1 is
+                case "1": // View campgrounds
                     CampSearchMenu campMenu = new CampSearchMenu(park);
                     campMenu.Run();
                     return true;
-                case "2": // Do whatever option 2 is
+                case "2": // this option has been made invalid
                     WriteError("Not yet implemented");
                     Pause("");
                     return false;
